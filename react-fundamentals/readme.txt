@@ -1,0 +1,1 @@
+Its a trash guide - I stopped here https://youtu.be/GNrdg3PzpJQ?list=PLMBfii-0liG_uCliODb_aUIuSley8awL_&t=3235
