@@ -31,9 +31,7 @@ export function useShoppingCartContext() {
 }
 
 
-function ShoppingCart() {
-  return null;
-}
+
 
 export function ShoppingCartProvider({children}:ShoppingCartProviderProps) {
   const [isOpen,setIsOpen] = useState(false)
