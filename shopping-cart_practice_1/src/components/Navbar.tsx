@@ -3,10 +3,16 @@ import { NavLink } from "react-router-dom";
 import { BiCart } from 'react-icons/bi'
 import { useContext } from "react";
 import { ShoppingCartContext } from "../context/ShoppingCartContext";
+import useShoppingCart from "../store/useShoppingCart";
 
 export function Navbar() {
 
-  const { openCart, closeCart, cartQuantity } = useContext(ShoppingCartContext)
+  // const { openCart, closeCart, cartQuantity } = useContext(ShoppingCartContext)
+  const { openCart, closeCart, cartQuantity } = useShoppingCart((state) => ({
+    openCart: state.openCart,
+    closeCart: state.closeCart,
+    cartQuantity: state.cartQuantity
+  }))
 
   return (
     <div className="bg-[rgba(193,93,255,0.8)] shadow-md py-2 px-4
