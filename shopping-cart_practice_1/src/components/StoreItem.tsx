@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { formatCurrency } from '../utils/currencyFormater'
-import { ShoppingCartContext } from '../context/ShoppingCartContext'
+import { useShoppingCartContext } from '../context/ShoppingCartContext'
 
 interface StoreItemProps {
   id: number
@@ -12,7 +12,7 @@ interface StoreItemProps {
 
 export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
 
-  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useContext(ShoppingCartContext)
+  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCartContext()
   const quantity = getItemQuantity(id)
 
   return (
